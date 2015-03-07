@@ -1,2 +1,115 @@
-# isammopencourseware.github.io
-Experiment from ISAMM open courseware !
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>The web site of 1 CM</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59473989-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script>
+    $(document).ready (function () {
+      console.log ("here !") ;
+      $("a").click (function () {
+          console.log ("here !") ;
+          g("click","a") ;
+      }) ;
+      
+      var courses = {
+                     "Image/Son":"https://dl.dropboxusercontent.com/u/107472374/Cours%20fini%20M%20I%202cm%20(1).doc",
+                     "Culture Web":"https://dl.dropboxusercontent.com/u/107472374/%D8%AB%D9%82%D8%A7%D9%81%D8%A9%20%D8%A7%D9%84%D9%88%D8%A7%D8%A8.docx",
+                     "Techniques MM":"https://dl.dropboxusercontent.com/u/107472374/Chapitre%201.docx",
+                     "C2I":"https://dl.dropboxusercontent.com/u/107472374/word.rar"} ;
+                     
+      for (var key in courses) 
+      {
+        console.log (courses[key]) ;
+        $('#courses tr:last').after('<tr><td>'+key+'</td><td><a href="'+courses[key]+'">Telecharger</a></td></tr>');
+      }
+      
+      for (var key in courses) 
+      {
+        console.log (courses[key]) ;
+        $('#subjects').append('<li><a>'+key+'</a></li>');
+      }
+      
+      var homework = {
+                     "Exercice Creation Numerique":"https://dl.dropboxusercontent.com/u/107472374/Exercice_1_CV_NUM%20(1).docx",
+                     "Exercice Conception Graphique":"https://www.dropbox.com/s/3z1cegq20sjvhds/EXERCICE1CGI%20cm1.rar?dl=0"
+                  } ;
+                     
+      for (var key in homework) 
+      {
+        console.log (homework[key]) ;
+        $('#homework tr:last').after('<tr><td>'+key+'</td><td><a href="'+homework[key]+'">Telecharger</a></td></tr>');
+      }
+    }) ;
+   </script>
+  </head>
+  <body style="margin: 50px ;">
+  <div id="logo" style="float:left;">
+    <img style="width : 100px ; height : auto; margin-left : 20px ;" src="http://www.isa2m.rnu.tn/index_files/cube.gif"/>
+  </div>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) return;
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+   fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+    <div>
+    
+  <div id="header" style="float:left;margin-bottom : 10px ;">
+    <h1>Cours 1CM 2014/2015 !</h1>
+  </div>
+  
+  <div style="clear: both ;width : 250px ;" class="hero-unit">
+  <h2>Les Matieres : </h2>
+    <ul id ="subjects">
+    </ul>
+  </div>
+  
+    <table class="table table-bordered" id="courses">
+      <tr><th>Matiere</th><th>Telecharger Cours</th></tr>
+    </table>
+    
+    <h2>Exercices Et Sujets</h2>
+    <table class="table table-bordered" id="homework">
+      <tr><th>Exercice</th><th>Telecharger Exercice</th></tr>
+    </table>
+    <hr>
+    <div class="fb-comments" data-href="http://1cm1.neocities.org/" data-width="1000" data-numposts="1" data-colorscheme="light"></div>
+  </div>
+    <hr>
+    <!-- begin olark code -->
+<script data-cfasync="false" type='text/javascript'>/*<![CDATA[*/window.olark||(function(c){var f=window,d=document,l=f.location.protocol=="https:"?"https:":"http:",z=c.name,r="load";var nt=function(){
+f[z]=function(){
+(a.s=a.s||[]).push(arguments)};var a=f[z]._={
+},q=c.methods.length;while(q--){(function(n){f[z][n]=function(){
+f[z]("call",n,arguments)}})(c.methods[q])}a.l=c.loader;a.i=nt;a.p={
+0:+new Date};a.P=function(u){
+a.p[u]=new Date-a.p[0]};function s(){
+a.P(r);f[z](r)}f.addEventListener?f.addEventListener(r,s,false):f.attachEvent("on"+r,s);var ld=function(){function p(hd){
+hd="head";return["<",hd,"></",hd,"><",i,' onl' + 'oad="var d=',g,";d.getElementsByTagName('head')[0].",j,"(d.",h,"('script')).",k,"='",l,"//",a.l,"'",'"',"></",i,">"].join("")}var i="body",m=d[i];if(!m){
+return setTimeout(ld,100)}a.P(1);var j="appendChild",h="createElement",k="src",n=d[h]("div"),v=n[j](d[h](z)),b=d[h]("iframe"),g="document",e="domain",o;n.style.display="none";m.insertBefore(n,m.firstChild).id=z;b.frameBorder="0";b.id=z+"-loader";if(/MSIE[ ]+6/.test(navigator.userAgent)){
+b.src="javascript:false"}b.allowTransparency="true";v[j](b);try{
+b.contentWindow[g].open()}catch(w){
+c[e]=d[e];o="javascript:var d="+g+".open();d.domain='"+d.domain+"';";b[k]=o+"void(0);"}try{
+var t=b.contentWindow[g];t.write(p());t.close()}catch(x){
+b[k]=o+'d.write("'+p().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};ld()};nt()})({
+loader: "static.olark.com/jsclient/loader0.js",name:"olark",methods:["configure","extend","declare","identify"]});
+/* custom configuration goes here (www.olark.com/documentation) */
+olark.identify('6151-102-10-1644');/*]]>*/</script><noscript><a href="https://www.olark.com/site/6151-102-10-1644/contact" title="Contact us" target="_blank">Questions? Feedback?</a> powered by <a href="http://www.olark.com?welcome" title="Olark live chat software">Olark live chat software</a></noscript>
+<!-- end olark code -->
+
+  </body>
+</html>                                                
